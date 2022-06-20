@@ -3,3 +3,4 @@ panda
 xgboost
 cachetools
 scikit-learn
+gunicorn
