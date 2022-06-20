@@ -1,0 +1,224 @@
+<!doctype html>
+<!--[if gt IE 9]><!-->
+<html class="no-js " lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Meta -->
+    <title>Predict Your Next Rent</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="icon" href="templates/images/apple-touch-icon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom & Default Styles -->
+    <link rel="stylesheet" href="templates/css/bootstrap.min.css">
+    <link rel="stylesheet" href="templates/css/font-awesodme.min.css">
+    <link rel="stylesheet" href="templates/style.css">
+
+</head>
+
+<body>
+    <section id="home" class="video-section js-height-full">
+        <div class="overlay"></div>
+        <div class="home-text-wrapper relative container">
+            <div class="home-message">
+                <p>Predict Your Next Rent</p>
+                <small style="color:white">This application is based on a Model trained from <a href="https://data.smartidf.services/explore/dataset/logement-encadrement-des-loyers/information/?disjunctive.id_zone&disjunctive.nom_quartier&disjunctive.piece&disjunctive.epoque&disjunctive.meuble_txt&sort=ref&disjunctive.annee&location=12,48.87126,2.34678&basemap=448ad0" 
+                    target="_blank" style="color:white; font-weight: bold; font-family: 'Droid Serif', sans-serif;"> <u style="text-decoration: overline;"> rents data</u></a> in Paris 🌆. 
+                    You just have to select some characteristics about the appartment and click on the submit button 🤯 ! (Check the code <a href="https://data.smartidf.services/explore/dataset/logement-encadrement-des-loyers/information/?disjunctive.id_zone&disjunctive.nom_quartier&disjunctive.piece&disjunctive.epoque&disjunctive.meuble_txt&sort=ref&disjunctive.annee&location=12,48.87126,2.34678&basemap=448ad0" 
+                    target="_blank" style="color:white; font-weight: bold; font-family: 'Droid Serif', sans-serif;"> <u style="text-decoration: overline;">here</u></a> 😎)</small>
+                <div hidden class="btn-wrapper">
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary wow slideInLeft">Read More</a> &nbsp;&nbsp;&nbsp;<a href="#"
+                            class="btn btn-default wow slideInRight">Buy Now</a>
+                    </div>
+                </div>
+                <div class="list-inputs">
+                    <form id="sg1" method="POST">
+                        <label for="neighborhood">Which Neighborhood ?
+                            <select id="neighborhood">
+                                <option value="Archives">Archives</option>
+                                <option value="Sainte-Marguerite">Sainte-Marguerite</option>
+                                <option value="Saint-Germain-des-Prés">Saint-Germain-des-Prés</option>
+                                <option value="Necker">Necker</option>
+                                <option value="Halles">Halles</option>
+                                <option value="Rochechouart">Rochechouart</option>
+                                <option value="Gaillon">Gaillon</option>
+                                <option value="Bonne-Nouvelle">Bonne-Nouvelle</option>
+                                <option value="Goutte-dOr">Goutte-dOr</option>
+                                <option value="Amérique">Amérique</option>
+                                <option value="Saint-Georges">Saint-Georges</option>
+                                <option value="Belleville">Belleville</option>
+                                <option value="Saint-Fargeau">Saint-Fargeau</option>
+                                <option value="Notre-Dame">Notre-Dame</option>
+                                <option value="Faubourg-Montmartre">Faubourg-Montmartre</option>
+                                <option value="Jardin-des-Plantes">Jardin-des-Plantes</option>
+                                <option value="Pont-de-Flandre">Pont-de-Flandre</option>
+                                <option value="Europe">Europe</option>
+                                <option value="Saint-Vincent-de-Paul">Saint-Vincent-de-Paul</option>
+                                <option value="Val-de-Grace">Val-de-Grace</option>
+                                <option value="Bercy">Bercy</option>
+                                <option value="PlainedeMonceaux">PlainedeMonceaux</option>
+                                <option value="Gros-Caillou">Gros-Caillou</option>
+                                <option value="Chaillot">Chaillot</option>
+                                <option value="Petit-Montrouge">Petit-Montrouge</option>
+                                <option value="Mail">Mail</option>
+                                <option value="Enfants-Rouges">Enfants-Rouges</option>
+                                <option value="Odeon">Odeon</option>
+                                <option value="Roquette">Roquette</option>
+                                <option value="Sainte-Avoie">Sainte-Avoie</option>
+                                <option value="Place-Vendôme">Place-Vendôme</option>
+                                <option value="Gare">Gare</option>
+                                <option value="Auteuil">Auteuil</option>
+                                <option value="Saint-Ambroise">Saint-Ambroise</option>
+                                <option value="Quinze-Vingts">Quinze-Vingts</option>
+                                <option value="Saint-Gervais">Saint-Gervais</option>
+                                <option value="Père-Lachaise">Père-Lachaise</option>
+                                <option value="Saint-Merri">Saint-Merri</option>
+                                <option value="Chaussée-dAntin">Chaussée-dAntin</option>
+                                <option value="Ecole-Militaire">Ecole-Militaire</option>
+                                <option value="Sorbonne">Sorbonne</option>
+                                <option value="Hôpital-Saint-Louis">Hôpital-Saint-Louis</option>
+                                <option value="Picpus">Picpus</option>
+                                <option value="Clignancourt">Clignancourt</option>
+                                <option value="Porte-Saint-Martin">Porte-Saint-Martin</option>
+                                <option value="Invalides">Invalides</option>
+                                <option value="Plaisance">Plaisance</option>
+                                <option value="Epinettes">Epinettes</option>
+                                <option value="Saint-Lambert">Saint-Lambert</option>
+                                <option value="Salpêtrière">Salpêtrière</option>
+                                <option value="Croulebarbe">Croulebarbe</option>
+                                <option value="Ternes">Ternes</option>
+                                <option value="Combat">Combat</option>
+                                <option value="Notre-Dame-des-Champs">Notre-Dame-des-Champs</option>
+                                <option value="Palais-Royal">Palais-Royal</option>
+                                <option value="Vivienne">Vivienne</option>
+                                <option value="Saint-Thomas-dAquin">Saint-Thomas-dAquin</option>
+                                <option value="Muette">Muette</option>
+                                <option value="Batignolles">Batignolles</option>
+                                <option value="Arsenal">Arsenal</option>
+                                <option value="Montparnasse">Montparnasse</option>
+                                <option value="Saint-Victor">Saint-Victor</option>
+                                <option value="Monnaie">Monnaie</option>
+                                <option value="Charonne">Charonne</option>
+                                <option value="LaChapelle">LaChapelle</option>
+                                <option value="St-Germain-lAuxerrois">St-Germain-lAuxerrois</option>
+                                <option value="Arts-et-Metiers">Arts-et-Metiers</option>
+                                <option value="Folie-Méricourt">Folie-Méricourt</option>
+                                <option value="Bel-Air">Bel-Air</option>
+                                <option value="Faubourg-du-Roule">Faubourg-du-Roule</option>
+                                <option value="Villette">Villette</option>
+                                <option value="Javel15Art">Javel15Art</option>
+                                <option value="Maison-Blanche">Maison-Blanche</option>
+                                <option value="Parc-de-Montsouris">Parc-de-Montsouris</option>
+                                <option value="Champs-Elysées">Champs-Elysées</option>
+                                <option value="Porte-Saint-Denis">Porte-Saint-Denis</option>
+                                <option value="Grandes-Carrières">Grandes-Carrières</option>
+                                <option value="Grenelle">Grenelle</option>
+                                <option value="Porte-Dauphine">Porte-Dauphine</option>
+                                <option value="Madeleine">Madeleine</option>
+                            </select>
+                        </label>
+                        <label for="main-rooms">How many main rooms ?
+                            <select id="main-rooms">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </label>
+                        <label for="period">What Period of Construction ?
+                            <select id="period">
+                                <option value="Before 1946">Before 1946</option>
+                                <option value="1946-1970">1946-1970</option>
+                                <option value="1971-1990">1971-1990</option>
+                                <option value="After 1990">After 1990</option>
+                            </select>
+                        </label>
+                        <label for="type">What Type of Rental ?
+                            <select id="type">
+                                <option value="Furnished">Furnished</option>
+                                <option value="Unfurnished">Unfurnished</option>
+                            </select>
+                        </label>
+                        <label for="area">What Area (in square meters) ?
+                            <input type="text" id="area" name="area" maxlength="3" size="10">
+                        </label>
+                        <div id="submit-button">
+                            <button id="btn" value="add-update" type="submit" name="btn">
+                                <p id="btnText">Predict 🏠</p>
+                        </div>
+                    </form>
+                </div><!-- end row -->
+
+                <div id="message">
+                    {{ message }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery Files -->
+    <script type="text/javascript" src="templates/js/jquery.min.js"></script>
+    <script type="text/javascript" src="templates/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="templates/js/custom.js"></script>
+    <!-- VIDEO BG PLUGINS -->
+    <script type="text/javascript" src="templates/js/videobg.js"></script>
+    <script type="text/javascript">
+        $(document).on('submit', '#sg1', function (e) {
+            e.preventDefault();
+            var res = {
+                loader: $("<div />", { class: "lds-dual-ring" })
+            };
+            var neighborhood = $("#neighborhood").val();
+            var period = $("#period").val();
+            var main_rooms = $("#main-rooms").val();
+            var type = $("#type").val();
+            var area = $("#area").val();
+            $.ajax({
+                url: "/get_prediction",
+                type: "get",
+                data: {
+                    neighborhood: neighborhood,
+                    period: period,
+                    main_rooms: main_rooms,
+                    type: type,
+                    area: area
+                },
+                beforeSend: function () {
+                    $("#message").find($("p")).remove();
+                    console.log('d')
+                    $("#message").append(res.loader);
+                },
+                success: function (data, res) {
+                    setTimeout(function () {
+                        delaySuccess(data, res);
+                    }, 1000);
+                }
+            });
+        });
+
+        function delaySuccess(response, res) {
+            $("#message").find(res.loader).remove();
+            $("#message").html('<p>' + response.result.toString() + '</p>');
+        }
+
+    </script>
+</body>
+
+</html>
