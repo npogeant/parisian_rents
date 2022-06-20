@@ -1,7 +1,6 @@
 
 from flask import Flask, render_template, request, redirect, jsonify, make_response, url_for
 import json
-from sqlalchemy import create_engine, text, Table, Column, MetaData, Integer, Computed
 import pandas as pd
 from cachetools import cached, TTLCache
 from config import Config
