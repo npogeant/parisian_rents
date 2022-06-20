@@ -181,8 +181,3 @@ def calculate_result():
                 and <mark>{type}</mark> is : <mark2>{rent} €</mark2> 🥳 "
                 
     return jsonify({"result": message})
-
-
-if __name__ == '__main__':
-    # Threaded option to enable multiple instances for multiple user access support
-    app.run(debug=True, port=5000)
