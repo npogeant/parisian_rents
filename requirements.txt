@@ -1,5 +1,5 @@
 flask
-panda
+pandas
 xgboost
 cachetools
 scikit-learn
