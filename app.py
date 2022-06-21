@@ -38,7 +38,7 @@ def calculate_result():
         categorical = ['Epoque de construction', 'Type de location']
         numerical = ['Secteurs géographiques', 'Numéro du quartier',
                      'Nombre de pièces principales']
-        dicts = df[categorical + numerical].to_dict(orient='records')
+        dicts = df.to_dict(orient='records')
         if fit_dv:
             X = dv.fit_transform(dicts)
         else:
@@ -148,6 +148,89 @@ def calculate_result():
                  'Villette': '13',
                  'Vivienne': '4'
                  }
+    
+    # As the model learned with number of geo sector
+    # we need to get the correct number based on the name
+    number_dict = {'Amérique': 75,
+                'Archives': 11,
+                'Arsenal': 15,
+                'Arts-et-Metiers': 9,
+                'Auteuil': 61,
+                'Batignolles': 67,
+                'Bel-Air': 45,
+                'Belleville': 77,
+                'Bercy': 47,
+                'Bonne-Nouvelle': 8,
+                'Chaillot': 64,
+                'Champs-Elysées': 29,
+                'Charonne': 80,
+                "Chaussée-d'Antin": 34,
+                'Clignancourt': 70,
+                'Combat': 76,
+                'Croulebarbe': 52,
+                'Ecole-Militaire': 27,
+                'Enfants-Rouges': 10,
+                'Epinettes': 68,
+                'Europe': 32,
+                'Faubourg-Montmartre': 35,
+                'Faubourg-du-Roule': 30,
+                'Folie-Méricourt': 41,
+                'Gaillon': 5,
+                'Gare': 50,
+                "Goutte-d'Or": 71,
+                'Grandes-Carrières': 69,
+                'Grenelle': 59,
+                'Gros-Caillou': 28,
+                'Halles': 2,
+                'Hôpital-Saint-Louis': 40,
+                'Invalides': 26,
+                'Jardin-des-Plantes': 18,
+                'Javel 15Art': 60,
+                'La Chapelle': 72,
+                'Madeleine': 31,
+                'Mail': 7,
+                'Maison-Blanche': 51,
+                'Monnaie': 21,
+                'Montparnasse': 53,
+                'Muette': 62,
+                'Necker': 58,
+                'Notre-Dame': 16,
+                'Notre-Dame-des-Champs': 23,
+                'Odeon': 22,
+                'Palais-Royal': 3,
+                'Parc-de-Montsouris': 54,
+                'Petit-Montrouge': 55,
+                'Picpus': 46,
+                'Place-Vendôme': 4,
+                'Plaine de Monceaux': 66,
+                'Plaisance': 56,
+                'Pont-de-Flandre': 74,
+                'Porte-Dauphine': 63,
+                'Porte-Saint-Denis': 38,
+                'Porte-Saint-Martin': 39,
+                'Père-Lachaise': 79,
+                'Quinze-Vingts': 48,
+                'Rochechouart': 36,
+                'Roquette': 43,
+                'Saint-Ambroise': 42,
+                'Saint-Fargeau': 78,
+                'Saint-Georges': 33,
+                'Saint-Germain-des-Prés': 24,
+                'Saint-Gervais': 14,
+                'Saint-Lambert': 57,
+                'Saint-Merri': 13,
+                "Saint-Thomas-d'Aquin": 25,
+                'Saint-Victor': 17,
+                'Saint-Vincent-de-Paul': 37,
+                'Sainte-Avoie': 12,
+                'Sainte-Marguerite': 44,
+                'Salpêtrière': 49,
+                'Sorbonne': 20,
+                "St-Germain-l'Auxerrois": 1,
+                'Ternes': 65,
+                'Val-de-Grace': 19,
+                'Villette': 73,
+                'Vivienne': 6}
 
     # Features name
     columns = ['Epoque de construction',
@@ -155,17 +238,18 @@ def calculate_result():
                'Secteurs géographiques',
                'Numéro du quartier',
                'Nombre de pièces principales']
+    
     # Values
     values = [[type_dict.get(period),
               type_dict.get(type),
-              neighborhood,
-              type_dict.get(neighborhood),
+              int(number_dict.get(neighborhood)),
+              int(type_dict.get(neighborhood)),
               main_rooms]]
     
     # Create a Dataframe with the response
     df = pd.DataFrame(data=values,
                       columns=columns)
-
+    
     # Initialize the inputs and the dv
     X, dv = preprocess(df=df, dv=dv)
     
@@ -178,6 +262,6 @@ def calculate_result():
     # The message that will be displayed in the html
     message = f"The predicted rent for an apartment located at <mark>{neighborhood}</mark>,\
                 in a period <mark>{period}</mark>, with <mark>{main_rooms}</mark> main rooms\
-                and <mark>{type}</mark> is : <mark2>{rent} €</mark2> 🥳 "
+                and <mark>{type}</mark> is : <mark>{rent} €</mark> 🥳 "
                 
     return jsonify({"result": message})

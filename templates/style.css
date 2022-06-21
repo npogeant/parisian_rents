@@ -334,14 +334,6 @@ mark {
   padding: 0px 10px 0px 10px;
 }
 
-mark2 {
-  background-color: rgb(129, 188, 215);
-  color: white;
-  border-radius: 20px;
-  padding: 0px 20px 0px 20px;
-  font-size: 30px;
-}
-
 .lds-dual-ring {
   display: inline-block;
   width: 80px;

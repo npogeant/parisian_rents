@@ -64,7 +64,7 @@
                                 <option value="Rochechouart">Rochechouart</option>
                                 <option value="Gaillon">Gaillon</option>
                                 <option value="Bonne-Nouvelle">Bonne-Nouvelle</option>
-                                <option value="Goutte-dOr">Goutte-dOr</option>
+                                <option value="Goutte-d'Or">Goutte-d'Or</option>
                                 <option value="Amérique">Amérique</option>
                                 <option value="Saint-Georges">Saint-Georges</option>
                                 <option value="Belleville">Belleville</option>
@@ -94,7 +94,7 @@
                                 <option value="Saint-Gervais">Saint-Gervais</option>
                                 <option value="Père-Lachaise">Père-Lachaise</option>
                                 <option value="Saint-Merri">Saint-Merri</option>
-                                <option value="Chaussée-dAntin">Chaussée-dAntin</option>
+                                <option value="Chaussée-d'Antin">Chaussée-d'Antin</option>
                                 <option value="Ecole-Militaire">Ecole-Militaire</option>
                                 <option value="Sorbonne">Sorbonne</option>
                                 <option value="Hôpital-Saint-Louis">Hôpital-Saint-Louis</option>
@@ -112,7 +112,7 @@
                                 <option value="Notre-Dame-des-Champs">Notre-Dame-des-Champs</option>
                                 <option value="Palais-Royal">Palais-Royal</option>
                                 <option value="Vivienne">Vivienne</option>
-                                <option value="Saint-Thomas-dAquin">Saint-Thomas-dAquin</option>
+                                <option value="Saint-Thomas-d'Aquin">Saint-Thomas-d'Aquin</option>
                                 <option value="Muette">Muette</option>
                                 <option value="Batignolles">Batignolles</option>
                                 <option value="Arsenal">Arsenal</option>
@@ -121,13 +121,13 @@
                                 <option value="Monnaie">Monnaie</option>
                                 <option value="Charonne">Charonne</option>
                                 <option value="LaChapelle">LaChapelle</option>
-                                <option value="St-Germain-lAuxerrois">St-Germain-lAuxerrois</option>
+                                <option value="St-Germain-l'Auxerrois">St-Germain-l'Auxerrois</option>
                                 <option value="Arts-et-Metiers">Arts-et-Metiers</option>
                                 <option value="Folie-Méricourt">Folie-Méricourt</option>
                                 <option value="Bel-Air">Bel-Air</option>
                                 <option value="Faubourg-du-Roule">Faubourg-du-Roule</option>
                                 <option value="Villette">Villette</option>
-                                <option value="Javel15Art">Javel15Art</option>
+                                <option value="Javel 15Art">Javel 15Art</option>
                                 <option value="Maison-Blanche">Maison-Blanche</option>
                                 <option value="Parc-de-Montsouris">Parc-de-Montsouris</option>
                                 <option value="Champs-Elysées">Champs-Elysées</option>
@@ -161,7 +161,7 @@
                             </select>
                         </label>
                         <label for="area">What Area (in square meters) ?
-                            <input type="text" id="area" name="area" maxlength="3" size="10">
+                            <input type="text" id="area" name="area" maxlength="3" size="10" value="50">
                         </label>
                         <div id="submit-button">
                             <button id="btn" value="add-update" type="submit" name="btn">
@@ -206,7 +206,6 @@
                 },
                 beforeSend: function () {
                     $("#message").find($("p")).remove();
-                    console.log('d')
                     $("#message").append(res.loader);
                 },
                 success: function (data, res) {
