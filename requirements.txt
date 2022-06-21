@@ -1,5 +1,6 @@
 flask
 pandas
+python-dotenv
 xgboost
 cachetools
 scikit-learn
