@@ -1,4 +1,4 @@
-# Parisian Rents [![parisian rents](https://img.shields.io/badge/heroku-parisian__rents-green?style=flat-square)](https://parisianrents.herokuapp.com/){:target="_blank"}
+# Parisian Rents [![parisian rents](https://img.shields.io/badge/heroku-parisian__rents-green?style=flat-square)](https://parisianrents.herokuapp.com/)
 > A Machine Learning project from EDA to a Web Application
 
 The idea of this application is to allow anyone that want to get an apartment inside Paris, to have **an estimation of the rent** he could have. 
