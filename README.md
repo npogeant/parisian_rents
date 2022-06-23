@@ -1,6 +1,4 @@
-<img src="icon.png" align="right" />
-
-# Parisian Rents [![parisian rents](https://img.shields.io/badge/heroku-parisian__rents-green?style=flat-square)](https://parisianrents.herokuapp.com/)
+# Parisian Rents [![parisian rents](https://img.shields.io/badge/heroku-parisian__rents-green?style=flat-square)](https://parisianrents.herokuapp.com/){:target="_blank"}
 > A Machine Learning project from EDA to a Web Application
 
 The idea of this application is to allow anyone that want to get an apartment inside Paris, to have **an estimation of the rent** he could have. 
@@ -17,5 +15,5 @@ The model was trained on rent by square meters, thus, I needed to ask the Area o
 This is an example of the [**web application**](https://parisianrents.herokuapp.com/) : 
 
 <p align="center">
-  <img src="utils/xnapper_parisianrents_app.png" alt="App Example" width="738" href="https://parisianrents.herokuapp.com/" target="_blank">
+  <img src="utils/xnapper_parisianrents_app.png" alt="App Example" width="738">
 </p>
