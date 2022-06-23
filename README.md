@@ -7,7 +7,7 @@ The idea of this application is to allow anyone that want to get an apartment in
 
 The **model** behind has been trained on [**Open Source Parisian Data**](https://data.smartidf.services/explore/dataset/logement-encadrement-des-loyers/information/?disjunctive.id_zone&disjunctive.nom_quartier&disjunctive.piece&disjunctive.epoque&disjunctive.meuble_txt&sort=ref&disjunctive.annee&location=12,48.87126,2.34678&basemap=448ad0) about fixed rent by square meters for around 7000 apartments.
 
-After an **Exploratory Data Analysis** that you can find here, I processed **feature engineering** and **modeling** to find the best model (this notebook). I decided to have a baseline with a simple Linear Regression. The best model against this baseline was an [**XGBoost**](https://xgboost.readthedocs.io/en/stable/) one. I used [**HyperOpt**](https://hyperopt.github.io/hyperopt/) to process a hyperparameter optimization.
+After an [**Exploratory Data Analysis**](https://github.com/npogeant/parisian_rents/blob/0081488a7b421edcbc724138c96cb4f1f8f8aabf/notebooks/EDA.ipynb) that you can find here, I processed **feature engineering** and **modeling** to find the best model ([this notebook](https://github.com/npogeant/parisian_rents/blob/master/notebooks/Modeling.ipynb)). I decided to have a baseline with a simple Linear Regression. The best model against this baseline was an [**XGBoost**](https://xgboost.readthedocs.io/en/stable/) one. I used [**HyperOpt**](https://hyperopt.github.io/hyperopt/) to process a hyperparameter optimization.
 
 ## The Web App
 
